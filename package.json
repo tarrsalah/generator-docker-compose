@@ -1,0 +1,41 @@
+{
+  "name": "generator-docker-compose",
+  "version": "0.1.0",
+  "description": "",
+  "homepage": "",
+  "author": {
+    "name": "tarrsalah",
+    "email": "tarrsalah@gmail.com",
+    "url": ""
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "",
+    "yeoman-generator"
+  ],
+  "devDependencies": {
+    "jest": "^22.0.6",
+    "yeoman-assert": "^3.1.0",
+    "yeoman-test": "^1.7.0"
+  },
+  "dependencies": {
+    "chalk": "^2.3.1",
+    "yeoman-generator": "^2.0.1",
+    "yosay": "^2.0.1"
+  },
+  "jest": {
+    "testMatch": [
+      "**/tests/**/*.js?(x)",
+      "**/?(*.)(spec|test).js?(x)"
+    ],
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": "tarrsalah/generator-docker-compose",
+  "license": "MIT"
+}

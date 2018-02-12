@@ -1,0 +1,28 @@
+---
+version: "3"
+services:
+  node:
+    image: "node:latest"
+    environment:
+      - NODE_ENV=developement
+    working_dir: /usr/src/app
+    volumes:
+      - "./:/usr/src/app"
+    expose:
+      - "80"
+    ports:
+      - "3000:80"
+    command: "npm start"
+    depends_on:
+      - mysql
+    links:
+      - mysql
+
+  mysql:
+    image: mariadb:latest
+    volumes:
+      - ".mysql:/var/lib/mysql"
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: db
